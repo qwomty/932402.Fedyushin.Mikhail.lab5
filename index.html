@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Федюшин Михаил | Музыкант</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .skills-list { list-style-type: square; }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="images/avatar.jpg" alt="Фото Федюшина Михаила" width="250" height="350">
+    <h1>Федюшин Михаил</h1>
+    <p>Музыкант, саунд-продюсер и звукорежиссёр</p>
+    
+    <div class="header-actions">
+      <button type="button" onclick="runVolumeAnalysis()">Запустить анализ громкости</button>
+      <button type="button" id="theme-toggle-btn" aria-pressed="false">Светлая тема</button>
+    </div>
+
+    <nav>
+      <ul class="nav-list">
+        <li><a href="#skills" class="nav-link">Навыки</a></li>
+        <li><a href="#projects" class="nav-link">Проекты</a></li>
+        <li><a href="#releases" class="nav-link">Релизы</a></li>
+        <li><a href="#equipment" class="nav-link">Оборудование</a></li>
+        <li><a href="#playlist-section" class="nav-link">Плейлист</a></li>
+        <li><a href="#contacts" class="nav-link">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="skills">
+      <h2>Мой арсенал навыков</h2>
+      <ul class="skills-list">
+        <li><span>Игра на акустической и бас-гитаре</span></li>
+        <li><span>Создание аранжировок в Ableton Live</span></li>
+        <li><span>Сведение мультитрека и мастеринг</span></li>
+        <li><span>Саунд-дизайн для видеороликов</span></li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Избранные проекты</h2>
+      <ol class="projects-list">
+        <li class="project-item"><span class="project-name">Запись и сведение музыкального альбома инди-группы</span></li>
+        <li class="project-item"><span class="project-name">Создание эмбиент-саундтрека для студенческой игры</span></li>
+        <li class="project-item"><span class="project-name">Синтвейв-ремикс на классическую рок-композицию</span></li>
+      </ol>
+    </section>
+
+    <section id="releases">
+      <h2>Мои релизы</h2>
+      <div class="releases-flex">
+        <article class="release-card">
+          <img src="images/neon_nights.jpg" alt="Обложка сингла Neon Nights">
+          <h3>Neon Nights</h3>
+          <p>Сингл | Synthwave</p>
+          <p>Год: <time datetime="2023-05-12">2023</time></p>
+        </article>
+        
+        <article class="release-card">
+          <img src="images/Dark_matter.jpg" alt="Обложка альбома Dark Matter">
+          <h3>Dark Matter</h3>
+          <p>Альбом | Ambient</p>
+          <p>Год: <time datetime="2024-01-20">2024</time></p>
+        </article>
+        
+        <article class="release-card">
+          <img src="images/overdrive.jpg" alt="Обложка EP Overdrive">
+          <h3>Overdrive</h3>
+          <p>EP | Cyberpunk</p>
+          <p>Год: <time datetime="2025-11-05">2025</time></p>
+        </article>
+        
+        <article class="release-card">
+          <img src="images/retro_pulse.jpg" alt="Обложка сингла Retro Pulse">
+          <h3>Retro Pulse</h3>
+          <p>Сингл | Retrowave</p>
+          <p>Год: <time datetime="2026-03-10">2026</time></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="equipment">
+      <h2>Студийное оборудование</h2>
+      <div class="equipment-grid">
+        <article class="equipment-card">
+          <img src="images/Korg.jpg" alt="Синтезатор Korg">
+          <h3>Korg Minilogue</h3>
+          <p>Аналоговый синтезатор для плотных басов.</p>
+        </article>
+        <article class="equipment-card">
+          <img src="images/Apollo.jpg" alt="Звуковая карта Apollo">
+          <h3>Universal Audio Apollo</h3>
+          <p>Топовая звуковая карта для студийной записи.</p>
+        </article>
+        <article class="equipment-card">
+          <img src="images/monitor.jpg" alt="Студийные мониторы">
+          <h3>Focal Solo6 Be</h3>
+          <p>Студийные мониторы для кристально чистого контроля.</p>
+        </article>
+        <article class="equipment-card">
+          <img src="images/micro.jpg" alt="Микрофон Neumann">
+          <h3>Neumann U87</h3>
+          <p>Легендарный конденсаторный микрофон для вокала.</p>
+        </article>
+        <article class="equipment-card">
+          <img src="images/Push.jpg" alt="Контроллер Push 2">
+          <h3>Ableton Push 2</h3>
+          <p>Умный MIDI-контроллер для создания битов.</p>
+        </article>
+        <article class="equipment-card">
+          <img src="images/moog.jpg" alt="Синтезатор Moog">
+          <h3>Moog Sub 37</h3>
+          <p>Монофонический синтезатор для соло-партий.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="playlist-section">
+      <div class="playlist-header">
+        <h2>Плейлист треков</h2>
+        <button type="button" id="toggle-playlist-btn" aria-expanded="true">Скрыть плейлист</button>
+      </div>
+
+      <div id="playlist-container" class="playlist-container">
+        <div class="playlist-add-panel">
+          <div class="playlist-field">
+            <label for="track-title-input">Название трека:</label>
+            <input type="text" id="track-title-input" placeholder="Например: Cyber Horizon">
+          </div>
+          <div class="playlist-field">
+            <label for="track-duration-input">Длительность:</label>
+            <input type="text" id="track-duration-input" placeholder="Например: 03:45">
+          </div>
+          <div class="playlist-buttons">
+            <button type="button" id="add-track-btn">Добавить трек</button>
+            <button type="button" id="clear-playlist-btn" class="danger-btn">Очистить плейлист</button>
+          </div>
+        </div>
+
+        <p id="playlist-error" class="playlist-error hidden" role="alert"></p>
+        <p class="playlist-stats">Всего треков: <span id="total-tracks-count">0</span> | В избранном: <span id="fav-tracks-count">0</span></p>
+
+        <ul id="playlist-list" class="playlist-list"></ul>
+      </div>
+    </section>
+
+    <aside>
+      <h3>О предпочтениях</h3>
+      <p><strong>Любимый инструмент:</strong> Аналоговый синтезатор Korg Minilogue.</p>
+      <p><strong>Жанр:</strong> Предпочитаю работать с электронной музыкой и альтернативным роком.</p>
+    </aside>
+
+    <section id="contacts">
+      <h2>Свяжитесь со мной</h2>
+      <form action="#" method="post" style="display: flex; flex-direction: column; gap: 12px; max-width: 400px;">
+        <label for="user_name">Ваше имя:</label>
+        <input type="text" id="user_name" name="user_name" placeholder="Как вас зовут?" required>
+        
+        <label for="user_email">Ваш Email:</label>
+        <input type="email" id="user_email" name="user_email" placeholder="Ваш Email адрес" required>
+        
+        <label for="user_message">Сообщение:</label>
+        <textarea id="user_message" name="user_message" placeholder="Текст вашего сообщения" rows="4" required></textarea>
+        
+        <button type="submit">Отправить письмо</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026. Федюшин Михаил. <a href="https://github.com/qwomty" class="footer-link">Мой GitHub</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
